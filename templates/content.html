@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI</title>
+    <!-- Add Bootstrap CSS Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #007BFF; /* Bootstrap Primary Color */
+            color: #fff;
+            padding: 10px; /* Increased padding for header */
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header button {
+            background-color: #28A745; /* Bootstrap Success Color */
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        header button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .brand-button {
+            background-color: #FFC107; /* Bootstrap Warning Color */
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .brand-button:hover {
+            transform: scale(1.05);
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .content-box {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #007BFF; /* Bootstrap Primary Color */
+            color: #fff;
+            padding: 20px; /* Increased padding for footer */
+            text-align: center;
+            position: center;
+            bottom: 0;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="container">
+        <!-- Add Brand Button with link to Coursera -->
+        <a href="https://www.coursera.org/" target="_blank" class="brand-button">Go to Coursera</a>
+        <h1>What is Coursera?</h1>
+        <div>
+            <button class="btn btn-success" onclick="shareOnTelegram()">Telegram</button>
+            <button class="btn btn-success" onclick="shareOnTwitter()">Twitter</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="content-box">
+            <p>Coursera is a global online learning platform that offers anyone, anywhere, access to online courses and degrees from leading universities and companies.
+               Coursera is an online learning platform featuring courses, degrees, certificate programs, and tutorials in a wide range of subjects. 
+               Over 300 leading universities and companies provide instruction, including Stanford, Duke, Google, and IBM. 
+               Learning experiences range from targeted hands-on projects to comprehensive, job-ready certificates and degrees.Coursera prioritizes top-quality learning through evidence-based online teaching and learning strategies. 
+               The average rating across courses on the Coursera platform is 4.7 out of 5 stars, with 73 percent of learners who complete courses reporting positive career-related outcomes
+            </p>
+        </div>
+    </main>
+
+    <footer class="container">
+        <p> © 2024</p>
+    </footer>
+
+    <!-- Add Bootstrap JS and Popper.js Links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function shareOnTelegram() {
+            var telegramLink = 'https://t.me/your-channel';
+            window.open('https://t.me/share/url?url=http://127.0.0.1:5000/content' + encodeURIComponent(telegramLink));
+        }
+
+        function shareOnTwitter() {
+            var twitterLink = 'https://twitter.com/intent/tweet?text=http://127.0.0.1:5000/content' + encodeURIComponent('Check out this page: ') + encodeURIComponent(window.location.href);
+            window.open(twitterLink);
+        }
+    </script>
+
+</body>
+</html>
